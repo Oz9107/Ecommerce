@@ -5,6 +5,8 @@ import { useEffect } from "react";
 import { getAllProductsThunk } from "./store/slices/products.slice";
 import { useDispatch } from "react-redux";
 import Header from "./components/shared/Header";
+import RegisterPage from "./pages/RegisterPage";
+import LoginPage from "./pages/LoginPage";
 
 function App() {
   //creamos el despachador
@@ -22,6 +24,8 @@ function App() {
       <Routes>
         {/* CREAMOS LA RUTA HOME O LA RUTA RAIZ */}
         <Route path="/" element={<HomePage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
     </div>
   );
