@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import "./styles/CardProduct.css";
 
 const CardProduct = ({ product }) => {
   const navigate = useNavigate();
@@ -15,20 +16,22 @@ const CardProduct = ({ product }) => {
 
   return (
     // Con navigate podemos navegar entre paginas como con Link
-    <article onClick={handleNavigate}>
-      <header>
-        <img src={product.images[0].url} alt="images" />
+    <article className="card" onClick={handleNavigate}>
+      <header className="card__header">
+        <img className="card__img card__img1" src={product.images[0].url} alt="" />
+        <img className="card__img card__img2" src={product.images[1].url} alt="" />
       </header>
-      <section>
-        <h4>{product.brand}</h4>
-        <h3>{product.title}</h3>
-        <article>
-          <h3>Price</h3>
-          <span>{product.price}</span>
+      <section className="card__body">
+        <header className="card__body__header">
+          <h4 className="card__brand">{product.brand}</h4>
+          <h3 className="card__name">{product.title}</h3>
+        </header>
+        <article className="card__price">
+          <h3 className="card__price__label">Price</h3>
+          <span className="card__price__value">{product.price}</span>
         </article>
-        {/* CON HANDLEADDCART DETENEMOS LA PROPAGACION DEL ONCLICK DE SU PADRE ARTICULE */}
-        <button onClick={handleAddCart}>
-          <i className="bx bxs-cart-add"></i>
+        <button className="card__btn" onClick={handleAddCart}>
+          <i className="bx bxs-cart-add card__icon"></i>
         </button>
       </section>
     </article>
