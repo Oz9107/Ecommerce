@@ -8,6 +8,7 @@ import Header from "./components/shared/Header";
 import RegisterPage from "./pages/RegisterPage";
 import LoginPage from "./pages/LoginPage";
 import ProductIdPage from "./pages/ProductIdPage";
+import CartPage from "./pages/CartPage";
 
 function App() {
   //creamos el despachador
@@ -28,6 +29,7 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/product/:id" element={<ProductIdPage />} />
+        <Route path="/cart" element={<CartPage />} />
       </Routes>
     </div>
   );

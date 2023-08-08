@@ -1,8 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import "./styles/CardProduct.css";
+import useCartApi from "../../hooks/useCartApi";
 
 const CardProduct = ({ product }) => {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
+
+  const {addProductInCart} = useCartApi()
 
   const handleNavigate = () => {
     navigate(`/product/${product.id}`);
@@ -11,7 +14,12 @@ const CardProduct = ({ product }) => {
   //CON ESTO DETENEMOS LOS EVENTOS DE LOS PADRES AL HIJO EN ESPECIAL
   //EN ESTE CASO EN BUTTON YA QUE TIENE LA VARIABLE
   const handleAddCart = (e) => {
-    e.stopPropagation();
+    e.stopPropagation()
+    const data = {
+      quantity: 1,
+      productId: product.id
+    }
+    addProductInCart(data)
   };
 
   return (
