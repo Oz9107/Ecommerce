@@ -1,5 +1,5 @@
 import useCartApi from "../../hooks/useCartApi";
-
+import "./ProductInCart.css";
 const ProductInCart = ({ prodCart }) => {
   const { deleteProductInCart } = useCartApi();
 
@@ -8,13 +8,13 @@ const ProductInCart = ({ prodCart }) => {
   };
 
   return (
-    <article>
+    <article className="product-in-cart">
       <header>
         <img src={prodCart.product.images[0].url} alt="img" />
         <section>
           <h3>{prodCart.product.title}</h3>
           <span>{prodCart.quantity}</span>
-          <button onClick={handleDeleteCart}>
+          <button className="delete-button" onClick={handleDeleteCart}>
             <i className="bx bx-trash"></i>
           </button>
         </section>

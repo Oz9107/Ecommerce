@@ -1,0 +1,72 @@
+:root {
+  --primary: #f85555;
+  --light-gray: #dcd9d9;
+  --gray: #c7c7c7;
+  --dark-gray: #4f4f4f;
+  --text-gray: #ababab;
+}
+
+.home-page-container {
+  display: flex;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.Product_container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.search-input {
+  padding: 10px;
+  border: 1px solid var(--light-gray);
+  border-radius: 4px 0 0 4px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.search-button {
+  padding: 10px 20px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  outline: none;
+  margin-left: -1px; /* Agrega este margen para separar el botón del input */
+}
+
+/* Media Query for screens 450px or less */
+@media (max-width: 450px) {
+  .home-page-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-container {
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 10px;
+  }
+
+  .search-input {
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+
+  .search-button {
+    border-radius: 4px;
+    margin-left: 0;
+  }
+}

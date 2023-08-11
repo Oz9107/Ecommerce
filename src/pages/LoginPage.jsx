@@ -26,7 +26,8 @@ const LoginPage = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(submit)}>
+    <form className="login-form" onSubmit={handleSubmit(submit)}>
+      <h2>Welcome! Enter your email and password to continue</h2>
       <div>
         <label htmlFor="email">Email</label>
         <input {...register("email")} type="email" id="email" />

@@ -6,7 +6,7 @@
   -ms-border-radius: 0.4em;
   -o-border-radius: 0.4em;
   width: 100%;
-  max-width: 20em;
+  max-width: 18em;
   cursor: pointer;
   transition: transform 150ms ease;
   -webkit-transition: transform 150ms ease;
@@ -14,6 +14,7 @@
   -ms-transition: transform 150ms ease;
   -o-transition: transform 150ms ease;
   background-color: white;
+  margin: 1rem;
 }
 .card:hover {
   transform: scale(1.03);
@@ -116,4 +117,20 @@
 .card__btn:hover {
   filter: grayscale(0);
   -webkit-filter: grayscale(0);
+}
+.card__body {
+  padding: 1em;
+  transition: background-color 0.3s ease-in-out;
+}
+@media (max-width: 450px) {
+  .card {
+    width: 100%;
+    max-width: none;
+  }
+  .card__body {
+    padding: 1em;
+  }
+  .card__btn {
+    left: 0;
+  }
 }

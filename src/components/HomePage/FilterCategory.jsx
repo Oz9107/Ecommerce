@@ -1,3 +1,4 @@
+//FilterCategory.jsx
 import { useEffect } from "react";
 import useFetch from "../../hooks/useFetch";
 import {
@@ -5,6 +6,7 @@ import {
   getFilteredProductsThunk,
 } from "../../store/slices/products.slice";
 import { useDispatch } from "react-redux";
+import "../HomePage/styles/FilterCategory.css";
 
 const FilterCategory = () => {
   const [categories, getAllCategories] = useFetch();
@@ -13,20 +15,19 @@ const FilterCategory = () => {
     getAllCategories("/categories");
   }, []);
 
-  console.log(categories);
 
   const dispatch = useDispatch();
 
-  const handleAllCategories = id => {
-    dispatch(getAllProductsThunk(id));
+  const handleAllCategories = () => {
+    dispatch(getAllProductsThunk());
   };
 
-  const handleFilterCategories = () => {
-    dispatch(getFilteredProductsThunk());
+  const handleFilterCategories = (id) => {
+    dispatch(getFilteredProductsThunk(id));
   };
 
   return (
-    <article>
+    <article className="filter-category">
       <h3>Category</h3>
       <ul>
         <li onClick={handleAllCategories}>All Categories</li>

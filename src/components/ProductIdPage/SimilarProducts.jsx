@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import useFetch from "../../hooks/useFetch";
 import CardProduct from "../HomePage/CardProduct";
-
+import "./styles/SimilarProducts.css";
 //hacemos una peticion de los elementos
 const SimilarProducts = ({ product }) => {
   const [productsByCaregory, getProductByCategory] = useFetch();
@@ -18,15 +18,15 @@ const SimilarProducts = ({ product }) => {
   console.log(productsByCaregory);
 
   const cbFilter = (prod) => {
-    if(prod.id !== product.id) {
-        return prod
+    if (prod.id !== product.id) {
+      return prod;
     }
   };
 
   return (
-    <div>
-      <h3>Similar Products</h3>
-      <div>
+    <div className="similar-products">
+      <h3 className="similar-products__title">Similar Products</h3>
+      <div className="similar-products__list">
         {productsByCaregory?.filter(cbFilter).map((prod) => (
           <CardProduct key={prod.id} product={prod} />
         ))}

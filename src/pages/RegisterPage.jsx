@@ -2,8 +2,7 @@
 import { useForm } from "react-hook-form";
 import useAuth from "../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
-
-
+import "../App.css";
 const RegisterPage = () => {
   //en el register vamos a ingresar: Un formulario para estoy vamos a la documentacion
   //Revisamos que campos se necesita en el create user
@@ -22,7 +21,8 @@ const RegisterPage = () => {
 
   return (
     // se agrega el onSubmit ya que es un formulario
-    <form onSubmit={handleSubmit(submit)}>
+    <form className="register-form" onSubmit={handleSubmit(submit)}>
+      <h2>Welcome! Register your data to continue</h2>
       <div>
         <label htmlFor="firstname">First Name</label>
         {/* A cada input le agregamos el spread y register (segun indica la biblioteca) */}
