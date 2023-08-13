@@ -11,7 +11,9 @@ const LogOut = () => {
 
   return (
     <div className="LogOut">
-      <img src="../public/Img/logout.png" alt="" />
+      <h2>
+        <i className="bx bx-exit"></i>
+      </h2>
       <button onClick={handleSubmit}>Log Out</button>
     </div>
   );
