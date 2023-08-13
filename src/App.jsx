@@ -11,6 +11,7 @@ import ProductIdPage from "./pages/ProductIdPage";
 import CartPage from "./pages/CartPage";
 import ProtectedRoutes from "./pages/ProtectedRoutes";
 import PurchasesPage from "./pages/PurchasesPage";
+import LogOut from "./pages/LogOut";
 
 function App() {
   //creamos el despachador
@@ -31,6 +32,7 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/product/:id" element={<ProductIdPage />} />
+        <Route path="/logout" element={<LogOut />} />
 
         <Route element={<ProtectedRoutes />}>
           <Route path="/cart" element={<CartPage />} />

@@ -46,7 +46,7 @@
 }
 
 /* Media Query for screens 450px or less */
-@media (max-width: 450px) {
+@media (max-width: 700px) {
   .navbar {
     flex-direction: column;
     align-items: stretch;

@@ -17,6 +17,7 @@ const RegisterPage = () => {
   const submit = (data) => {
     createUser(data, navigate);
     reset({ firstName: "", lastName: "", email: "", password: "", phone: "" });
+    navigate("/login"); // Redirige al usuario a la ruta '/'
   };
 
   return (

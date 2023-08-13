@@ -13,13 +13,19 @@ const Header = () => {
         <ul>
           {/* Vinculamos el App.jsx con el header */}
           <li>
-            <Link to="/login">Login</Link>
-          </li>
-          <li>
             <Link to="/register">Register</Link>
           </li>
           <li>
+            <Link to="/login">Login</Link>
+          </li>
+          <li>
+            <Link to="/logout">Log Out</Link>
+          </li>
+          <li>
             <Link to="/cart">Cart</Link>
+          </li>
+          <li>
+            <Link to="/purchases">Purchases</Link>
           </li>
         </ul>
       </nav>
