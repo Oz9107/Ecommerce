@@ -1,3 +1,4 @@
+//cart.slice.js
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 import getConfigToken from "../../utils/getConfigToken";

@@ -1,8 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import {
-  getCartThunk,
-  updateCartItemQuantity,
-} from "../store/slices/cart.slice"; // Asegúrate de importar la acción necesaria para actualizar la cantidad
+import { getCartThunk, updateCartG } from "../store/slices/cart.slice"; // Importa la acción updateCartG
 import { useEffect, useState } from "react"; // Importa useState
 import ProductInCart from "../components/CartPage/ProductInCart";
 import usePurchases from "../hooks/usePurchases";
@@ -28,7 +25,13 @@ const CartPage = () => {
       ...prevQuantities,
       [productId]: newQuantity,
     }));
-    dispatch(updateCartItemQuantity({ productId, quantity: newQuantity }));
+
+    // Utiliza la acción updateCartG para actualizar la cantidad en el carrito
+    const updatedProduct = {
+      ...cart.find((prod) => prod.id === productId),
+      quantity: newQuantity,
+    };
+    dispatch(updateCartG(updatedProduct));
   };
 
   const totalAmount = cart.reduce((acc, cv) => {
