@@ -45,6 +45,34 @@
   font-size: 1rem;
   margin: 0.5rem;
 }
+.quantity-controls {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  font-size: 1rem;
+  background-color: var(--primary);
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  color: #edebeb;
+}
+
+.quantity {
+  margin: 0 10px;
+  font-size: 1.2rem;
+}
+
+.quantity-button:hover {
+  background-color: #6e0808;
+  color: #edebeb;
+}
+
 @media (max-width: 450px) {
   .product-in-cart {
     flex-direction: column;
