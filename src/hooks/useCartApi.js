@@ -4,7 +4,8 @@ import { deleteCartG, getCartThunk } from "../store/slices/cart.slice";
 import { useDispatch } from "react-redux";
 
 const useCartApi = () => {
-  const baseUrl = "https://e-commerce-api-v2.academlo.tech/api/v1";
+  const baseUrl = "https://ecommerceapi-xbph.onrender.com";
+  //const baseUrl = "https://e-commerce-api-v2.academlo.tech/api/v1";
 
   const dispatch = useDispatch();
 
