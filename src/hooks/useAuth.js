@@ -4,8 +4,8 @@ import axios from "axios"
 const useAuth = () => {
 
 const createUser = (data, navigate) => {
-  const url = "https://ecommerceapi-xbph.onrender.com/users";
-  //const url = "https://e-commerce-api-v2.academlo.tech/api/v1/users";
+  //const url = "https://ecommerceapi-xbph.onrender.com/users";
+  const url = "https://e-commerce-api-v2.academlo.tech/api/v1/users";
   axios
     .post(url, data)
     .then((res) => {
@@ -15,8 +15,8 @@ const createUser = (data, navigate) => {
     .catch((err) => console.log(err));
 };
     const loginUser = (data, navigate) => {
-      const url = "https://ecommerceapi-xbph.onrender.com/users/login";
-      //const url = "https://e-commerce-api-v2.academlo.tech/api/v1/users/login";
+      //const url = "https://ecommerceapi-xbph.onrender.com/users/login";
+      const url = "https://e-commerce-api-v2.academlo.tech/api/v1/users/login";
       axios
         .post(url, data)
         //al hacer login va generar un token

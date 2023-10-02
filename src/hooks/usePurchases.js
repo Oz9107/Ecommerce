@@ -9,8 +9,8 @@ const usePurchases = () => {
 
   const dispatch = useDispatch();
 
-  const url = "https://ecommerceapi-xbph.onrender.com/purchases";
-  //const url = "https://e-commerce-api-v2.academlo.tech/api/v1/purchases";
+  //const url = "https://ecommerceapi-xbph.onrender.com/purchases";
+  const url = "https://e-commerce-api-v2.academlo.tech/api/v1/purchases";
   //post
   const makeAPurchase = () => {
     axios
